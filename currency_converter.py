@@ -14,7 +14,7 @@ rates = data["conversion_rates"]
 
 
 # We print the convertions
-print("Rates to $1 USD:")
+print("\nRates to $1 USD:")
 print(f"- {rates['EUR']} €") # Euros
 print(f"- {rates['GBP']} £") # Pounds
 print(f"- {rates['JPY']} ¥\n") # Yens
@@ -22,8 +22,8 @@ print(f"- {rates['JPY']} ¥\n") # Yens
 
 # We ask the user what he wants
 amount = float(input("Choose the quantity to convert: "))
-from_currency = str(input("Which currency is it? ")).strip().upper()
-to_currency = str(input("Which currency do you want to convert it to? ")).strip().upper()
+from_currency = str(input("- Which currency is it? ")).strip().upper()
+to_currency = str(input("- Which currency do you want to convert it to? ")).strip().upper()
 
 
 # We just need a simple function for it all
