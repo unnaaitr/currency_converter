@@ -20,10 +20,17 @@ print(f"- {rates['GBP']} £") # Pounds
 print(f"- {rates['JPY']} ¥\n") # Yens
 
 
-# We ask the user what he wants
-amount = float(input("Choose the quantity to convert: "))
-from_currency = str(input("- Which currency is it? ")).strip().upper()
-to_currency = str(input("- Which currency do you want to convert it to? ")).strip().upper()
+# We ask the user what he wants, solving minor issues like money < 0
+while True:
+    amount = float(input("Choose the quantity to convert: "))
+
+    if amount <= 0:
+        print("Try again!\n")  
+
+    else:
+        from_currency = str(input("- Which currency is it? ")).strip().upper()
+        to_currency = str(input("- Which currency do you want to convert it to? ")).strip().upper()
+        break
 
 
 # We just need a simple function for it all
@@ -32,4 +39,7 @@ def convert(amount, from_currency, to_currency, rates):
     print(f"{amount} {from_currency} = {result:.2f} {to_currency}\n")
     return result
 
+
+# Then we call the function to work
 convert(amount, from_currency, to_currency, rates)
+
