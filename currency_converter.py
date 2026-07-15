@@ -23,6 +23,7 @@ print(f"- {rates['JPY']} ¥\n") # Yens
 # We ask the user what he wants, solving minor issues like money < 0
 while True:
     amount = float(input("Choose the quantity to convert: "))
+    print(" ")
 
     if amount <= 0:
         print("Try again!\n")  
@@ -40,6 +41,6 @@ def convert(amount, from_currency, to_currency, rates):
     return result
 
 
-# Then we call the function to work
+# Then we call the function to let it work
 convert(amount, from_currency, to_currency, rates)
 
