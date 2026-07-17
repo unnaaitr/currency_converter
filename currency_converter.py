@@ -34,6 +34,7 @@ while True:
             to_currency = str(input("- Which currency do you want to convert it to? ")).strip().upper()
 
             if from_currency not in rates or to_currency not in rates:
+                print(" ")
                 print("Enter a valid currency!\n")
 
             else:
